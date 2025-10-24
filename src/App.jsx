@@ -1,35 +1,26 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useEffect } from 'react'
+import Layout from './components/layout/Layout'
+import Header from './components/sections/Header'
+import About from './components/sections/About'
+import Services from './components/sections/Services'
+import Portfolio from './components/sections/Portfolio'
+import Contact from './components/sections/Contact'
+import { initAnimations } from './utils/animations'
 
 function App() {
-  const [count, setCount] = useState(0)
+    useEffect(() => {
+        initAnimations()
+    }, [])
 
-  return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    return (
+        <Layout>
+            <Header />
+            <About />
+            <Services />
+            <Portfolio />
+            <Contact />
+        </Layout>
+    )
 }
 
 export default App
