@@ -11,7 +11,7 @@ const Navbar = () => {
                     <div className="col-lg-3 col-6 order1">
                         <div className="bord">
                             <a className="logo icon-img-70" href="#">
-                                <img src="/assets/imgs/Twist();(1).png" alt="logo" />
+                                <img src="/src/assets/imgs/Twist();(1).png" alt="logo" />
                             </a>
                         </div>
                     </div>
